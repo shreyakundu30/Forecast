@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Series Forecasting Results</title>
+</head>
+<body>
+    <h1>Time Series Forecasting Results</h1>
+    {% for model, graph in graphs.items() %}
+    <div>
+        <h2>{{ model.split('_')[0] }} Forecast</h2>
+        <h3>Training Data</h3>
+        <img src="data:image/png;base64,{{ graph.split(',')[0] }}" alt="{{ model }} Training Forecast">
+        <h3>Testing Data</h3>
+        <img src="data:image/png;base64,{{ graph.split(',')[1] }}" alt="{{ model }} Testing Forecast">
+    </div>
+    {% endfor %}
+</body>
+</html>

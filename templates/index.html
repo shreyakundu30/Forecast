@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Series Forecasting</title>
+</head>
+<body>
+    <h1>Upload CSV File</h1>
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <label for="training_percentage">Training Percentage:</label>
+        <input type="number" name="training_percentage" id="training_percentage" min="1" max="99">
+        <label for="testing_percentage">Testing Percentage:</label>
+        <input type="number" name="testing_percentage" id="testing_percentage" min="1" max="99">
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
